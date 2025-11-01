@@ -1,0 +1,390 @@
+/* ========================================
+   LAW FIRM CUSTOM CSS OVERRIDES
+   ======================================== */
+
+/* ========================================
+   1. PROFESSIONAL COLOR SCHEME (Navy & Gold)
+   ======================================== */
+
+:root {
+    /* Law Firm Brand Colors - CHANGED TO BLUE FOR TESTING */
+    --law-firm-navy: #0066cc;
+    --law-firm-gold: #0066cc;
+    --law-firm-light-navy: #0080ff;
+    --law-firm-dark-navy: #004499;
+    --law-firm-light-gold: #66b3ff;
+    --law-firm-dark-gold: #0052a3;
+    
+    /* Professional Grays */
+    --law-firm-gray-dark: #2d3748;
+    --law-firm-gray-medium: #4a5568;
+    --law-firm-gray-light: #e2e8f0;
+    --law-firm-white: #ffffff;
+    
+    /* Override Bootstrap Primary Colors */
+    --bs-primary: var(--law-firm-navy);
+    --bs-primary-rgb: 30, 58, 95;
+    --bs-secondary: var(--law-firm-gold);
+    --bs-secondary-rgb: 212, 175, 55;
+}
+
+/* ========================================
+   2. HEADER/MASTHEAD CUSTOMIZATION
+   ======================================== */
+
+.masthead {
+    background: linear-gradient(135deg, var(--law-firm-navy) 0%, var(--law-firm-light-navy) 100%);
+    color: var(--law-firm-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.masthead::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="scales" patternUnits="userSpaceOnUse" width="20" height="20"><path d="M10,0 Q20,10 10,20 Q0,10 10,0" fill="none" stroke="rgba(212,175,55,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23scales)"/></svg>') repeat;
+    opacity: 0.3;
+}
+
+.masthead .container {
+    position: relative;
+    z-index: 2;
+}
+
+.masthead-heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-weight: 700;
+    color: var(--law-firm-white);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.masthead-subheading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: var(--law-firm-light-gold);
+    font-style: italic;
+}
+
+/* ========================================
+   3. NAVIGATION STYLING
+   ======================================== */
+
+.navbar-brand {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-weight: 700;
+    color: var(--law-firm-navy) !important;
+}
+
+.navbar-nav .nav-link {
+    color: var(--law-firm-navy) !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--law-firm-gold) !important;
+}
+
+/* ========================================
+   4. BUTTONS & CALL-TO-ACTION
+   ======================================== */
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--law-firm-navy), var(--law-firm-light-navy));
+    border: 2px solid var(--law-firm-gold);
+    color: var(--law-firm-white);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(30, 58, 95, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, var(--law-firm-gold), var(--law-firm-dark-gold));
+    border-color: var(--law-firm-navy);
+    color: var(--law-firm-navy);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.btn-xl {
+    padding: 18px 40px;
+    font-size: 1.1rem;
+}
+
+/* ========================================
+   5. SECTION HEADERS
+   ======================================== */
+
+.section-heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: var(--law-firm-navy);
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--law-firm-gold), var(--law-firm-dark-gold));
+}
+
+.section-subheading {
+    color: var(--law-firm-gray-medium);
+    font-style: italic;
+    margin-bottom: 3rem;
+}
+
+/* ========================================
+   6. SERVICES SECTION
+   ======================================== */
+
+#services {
+    background: var(--law-firm-gray-light);
+}
+
+.service-heading {
+    color: var(--law-firm-navy);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.fa-stack {
+    transition: transform 0.3s ease;
+}
+
+.fa-stack:hover {
+    transform: scale(1.1);
+}
+
+.fa-stack .fa-circle {
+    color: var(--law-firm-navy);
+}
+
+.fa-stack .fa-inverse {
+    color: var(--law-firm-gold);
+}
+
+/* ========================================
+   7. PORTFOLIO SECTION
+   ======================================== */
+
+.portfolio-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.portfolio-hover {
+    background: rgba(30, 58, 95, 0.9);
+}
+
+.portfolio-caption-heading {
+    color: var(--law-firm-navy);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-weight: 600;
+}
+
+.portfolio-caption-subheading {
+    color: var(--law-firm-gold);
+    font-weight: 500;
+}
+
+/* ========================================
+   8. FOOTER STYLING
+   ======================================== */
+
+footer {
+    background: linear-gradient(135deg, var(--law-firm-dark-navy) 0%, var(--law-firm-navy) 100%);
+    color: var(--law-firm-white);
+    padding: 3rem 0 2rem 0;
+}
+
+footer h5 {
+    color: var(--law-firm-gold);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+footer p, footer li {
+    color: var(--law-firm-gray-light);
+    line-height: 1.6;
+}
+
+footer a {
+    color: var(--law-firm-light-gold);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--law-firm-gold);
+}
+
+footer .fas {
+    color: var(--law-firm-gold);
+    margin-right: 8px;
+}
+
+/* ========================================
+   9. TYPOGRAPHY ENHANCEMENTS
+   ======================================== */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--law-firm-gray-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-weight: 600;
+    color: var(--law-firm-navy);
+}
+
+.text-muted {
+    color: var(--law-firm-gray-medium) !important;
+}
+
+/* ========================================
+   10. RESPONSIVE DESIGN OPTIMIZATIONS
+   ======================================== */
+
+@media (max-width: 768px) {
+    .masthead-heading {
+        font-size: 2.5rem;
+    }
+    
+    .masthead-subheading {
+        font-size: 1.1rem;
+    }
+    
+    .btn-xl {
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+    
+    .section-heading {
+        font-size: 2rem;
+    }
+    
+    .portfolio-item {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .masthead {
+        padding: 4rem 0;
+    }
+    
+    .masthead-heading {
+        font-size: 2rem;
+    }
+    
+    .section-heading {
+        font-size: 1.75rem;
+    }
+    
+    footer {
+        text-align: center;
+    }
+    
+    footer .col-md-4 {
+        margin-bottom: 2rem;
+    }
+}
+
+/* ========================================
+   11. PROFESSIONAL ANIMATIONS
+   ======================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-heading,
+.service-heading,
+.portfolio-caption-heading {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* ========================================
+   12. LEGAL CONTENT SPECIFIC STYLING
+   ======================================== */
+
+.legal-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.8;
+    color: var(--law-firm-gray-dark);
+}
+
+.legal-highlight {
+    background: linear-gradient(120deg, transparent 0%, var(--law-firm-light-gold) 0%, var(--law-firm-light-gold) 100%, transparent 100%);
+    background-size: 100% 40%;
+    background-repeat: no-repeat;
+    background-position: 0 80%;
+    padding: 2px 4px;
+}
+
+.legal-quote {
+    border-left: 4px solid var(--law-firm-gold);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--law-firm-gray-medium);
+}
+
+/* ========================================
+   13. ACCESSIBILITY IMPROVEMENTS
+   ======================================== */
+
+.btn:focus,
+.nav-link:focus {
+    outline: 2px solid var(--law-firm-gold);
+    outline-offset: 2px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ========================================
+   END OF LAW FIRM CUSTOM CSS
+   ======================================== */
